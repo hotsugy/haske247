@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HASKE247</title>
+  <link rel="stylesheet" href="./css/w3.css">
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 75px;
+  height: 75px;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid red;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myLoader()" style="margin:0;" class="w3-black">
+<div id="loader"></div>
+<div style="background: url('./img/blog-header.jpg') no-repeat center; background-size: cover;">
+<!--  -->
+<div class="w3-container w3-text-red w3-hide-small">
+  <a href="./index.html" style="text-decoration: none;">
+    <h1><b>Haske247</b></h1>
+  </a>
+</div>
+<!--  -->
+<div class="w3-container w3-border-bottom w3-white w3-text-red w3-xlarge w3-hide-medium w3-hide-large">
+  <nav>
+    <a href="./index.html" style="text-decoration: none;">
+      <h1 class="w3-large"><b>Haske247</b></h1>
+    </a>
+  </nav>
+</div>  
+<!--  -->
+<div class="w3-container w3-light-grey w3-mobile" style="width: 50%;margin: auto; padding: 25px 25px;">
+  <h3 class="w3-xxlarge">Sign In</h3>
+  <form action="">
+    <label for="email">Email
+      <input type="email" name="email" id="email" class="w3-input">
+    </label>
+    <div class="w3-padding-16"></div>
+    <label for="password">Password
+      <input type="password" name="password" id="password" class="w3-input">
+    </label>
+    <div class="w3-padding-24"></div>
+    <button type="submit" class="w3-button w3-block w3-padding-16 w3-round w3-red"><b>Sign In</b></button>
+    <div class="w3-border w3-section"></div>
+    <p>New to Netflix? <a href="./signup.html">Sign up now</a>.</p>
+  </form>
+</div>
+<!--  -->
+<div class="w3-padding-16"></div>
+<!--  -->
+</div>
+<script>
+var myVar;
+
+function myLoader() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
