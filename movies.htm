@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HASKE247</title>
+  <link rel="stylesheet" href="./css/w3.css">
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #f4aa09;
+  border-bottom: 16px solid #f4aa09;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myLoader()" style="margin:0;" class="w3-grey">
+  <div id="loader"></div>
+  <div style="display:none; background: url('./img/INTRO_AvengersAgeUltron_FINAL.jpg') no-repeat center fixed; background-size: cover;" id="myDiv">
+    <div class="w3-padding"></div>
+  <!--  -->
+  <div class="w3-content" style="max-width: 400px;margin: auto;background-color: #0c282c;">
+    <nav class="w3-bar w3-padding">
+      <a href="./login.htm" class="w3-bar-item">
+        <img src="./img/logo.jpg" alt="logo" style="max-width: 75px;">
+      </a>
+    </nav>
+  	<!--  -->
+  	<div class="w3-row-padding w3-padding">
+      <div class="w3-col m6">
+        <img src="./img/movies/fight-club.jpg" alt="Fight Club" class="w3-image">
+      </div>
+      <div class="w3-col m6">
+        <img src="./img/movies/avatar.jpg" alt="Avatar" class="w3-image">
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <img src="./img/movies/zidane.jpg" alt="Zidane" class="w3-image">
+      </div>
+      <div class="w3-col m6">
+        
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        
+      </div>
+      <div class="w3-col">
+        
+      </div>
+    </div>
+    <!--  -->
+  	<div class="w3-padding"></div>
+  	<!--  -->
+	<div class="w3-row-padding w3-center w3-text-white">
+	  <div class="w3-col s4">
+	  	<a href="./movies.htm" class="w3-button">
+	  	  <i class="fa fa-film w3-xxxlarge w3-text-blue"></i>
+	  	  <p>MOVIES</p>
+	  	</a>
+	  </div>
+	  <div class="w3-col s4">
+	  	<a href="./series.htm" class="w3-button">
+	  	  <i class="fa fa-television w3-xxxlarge w3-text-light-blue"></i>
+	  	  <p>TV SERIES</p>
+	  	</a>
+	  </div>
+	  <div class="w3-col s4">
+	  	<a href="./freebies.htm" class="w3-button">
+	  	  <i class="fa fa-gift w3-xxxlarge w3-text-red"></i>
+	  	  <p>FREEBIES</p>
+	  	</a>
+	  </div>
+	</div>
+
+  	<!-- <img src="./img/app-login-247.png" alt="app login design" class="w3-image"> -->
+  </div>
+  <!--  -->
+  </div>
+<script>
+var myVar;
+
+function myLoader() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
